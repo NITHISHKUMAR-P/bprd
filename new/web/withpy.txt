@@ -25,5 +25,18 @@ from http.server import HTTPServer, BaseHTTPRequestHandler content = """
 </body>
 
 </html>
-""" class myhandler(BaseHTTPRequestHandler): def do_GET(self): print("request received") self.send_response(200) self.send_header('content-type', 'text/html; charset=utf-8') self.end_headers() self.wfile.write(content.encode()) server_address = ('',8090)
-httpd = HTTPServer(server_address,myhandler) print("my webserver is running...") httpd.serve_forever()
+from http.server import HTTPServer,BaseHTTPRequestHandler
+content="""
+Add html content here
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print('Request Received!!!')
+        self.send_response(200)
+        self.send_header('content-type','text/html;charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address=('',8000)
+httpd=HTTPServer(server_address,myhandler)
+print('MY Webserver is running....')
+httpd.serve_forever()

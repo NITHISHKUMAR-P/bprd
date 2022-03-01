@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Math Calculations</h1>
+    <Rectangle-Area class="content"> </Rectangle-Area>
+    <div class="footer">
+        &copy; Copyright. All Rights Reserved | Developed by Nithishkumar P
+    </div>
+</div>
