@@ -1,0 +1,37 @@
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var shape,color;
+c.addEventListener('click',myClickEvent);
+document.getElementById('circle').addEventListener('click',circleClick);
+document.getElementById('square').addEventListener('click',squareClick);
+document.getElementById('red').addEventListener('click',redClick);
+document.getElementById('green').addEventListener('click',greenClick);
+function myClickEvent(e){
+    ctx.beginPath();
+    if (shape==0){
+        ctx.arc(e.offsetX,e.offsetY,40,0,2*Math.PI);
+    }
+    if (shape==1){
+        ctx.rect(e.offsetX,e.offsetY,40,40);
+    }
+    if (color==0){
+        ctx.strokeStyle='#ff0000';
+    } 
+    if (color==1){
+        ctx.strokeStyle='#00ff00'
+    }
+    ctx.stroke();
+}
+
+function circleClick(){
+    shape=0
+}
+function squareClick(){
+    shape=1
+}
+function redClick(){
+    color=0
+}
+function greenClick(){
+    color=1
+}

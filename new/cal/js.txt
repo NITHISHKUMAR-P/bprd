@@ -1,0 +1,61 @@
+var button;
+
+button=document.querySelector("#calculate");
+button.addEventListener("click",function(){
+
+var atext,rtext,htext;
+rtext=document.querySelector("#radius");
+htext=document.querySelector("#height");
+atext=document.querySelector("#volume");
+
+var reg;
+var radvaluesample,heivaluesample;
+var rreg,hreg;
+reg = new RegExp("^[1-9]+[0-9]*$");
+radvaluesample = rtext.value;
+rreg = radvaluesample.match(reg)
+heivaluesample = htext.value;
+hreg = heivaluesample.match(reg)
+
+if (rreg == null){
+    alert("Wrong value for radius")
+}
+if (hreg == null){
+    alert("Wrong value for height")
+}
+
+
+var rval,hval,aval;
+rval=parseInt(rtext.value);
+hval=parseInt(htext.value);
+aval=3.14*rval*rval*hval;
+atext.value=""+aval;
+
+});
+
+var button;
+
+button=document.querySelector("#avgcalc");
+button.addEventListener("click",function(){
+
+var num1,num2,num3,num4,num5,avg;
+num1=document.querySelector("#num1");
+num2=document.querySelector("#num2");
+num3=document.querySelector("#num3");
+num4=document.querySelector("#num4");
+num5=document.querySelector("#num5");
+avg=document.querySelector("#avg");
+
+
+
+var num1val,num2val,num3val,num4val,num5val,avgval;
+num1val=parseInt(num1.value);
+num2val=parseInt(num2.value);
+num3val=parseInt(num3.value);
+num4val=parseInt(num4.value);
+num5val=parseInt(num5.value);
+
+avgval=(num1val+num2val+num3val+num4val+num5val)/5;
+avg.value=""+avgval;
+
+});

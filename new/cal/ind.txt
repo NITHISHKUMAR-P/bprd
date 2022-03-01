@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+        Radius:<input type="text" id="radius" value="0"> Meter <br><br>
+        Height:<input type="text" id="height" value="0"> Meter <br><br>
+        <input type="button" value="Calculate" id="calculate"><br><br>
+        Volume :<input type="text" id="volume" readonly="0"> Meter<sup> 3</sup>
+        <hr>
+        Num 1:<input type="text" id="num1" value="0"><br><br>
+        Num 2:<input type="text" id="num2" value="0"><br><br>
+        Num 3:<input type="text" id="num3" value="0"><br><br>
+        Num 4:<input type="text" id="num4" value="0"><br><br>
+        Num 5:<input type="text" id="num5" value="0"><br><br>
+        <input type="button" value="Calculate" id="avgcalc"><br><br>
+        Average :<input type="text" id="avg" readonly="0">
+    <script src="./js/script.js"></script>
+</body>
+</html>

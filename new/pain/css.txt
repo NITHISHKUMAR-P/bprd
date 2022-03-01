@@ -1,0 +1,20 @@
+.container{
+    text-align: center;
+}
+.color{
+    text-align: center;
+    display: block;
+}
+.shape{
+    text-align: center;
+    display: block;
+}
+.canvas{
+    text-align: center;
+    display: block;
+}
+input{
+    height: 30px;
+    width: 75px;
+    border-radius: 10px;
+}

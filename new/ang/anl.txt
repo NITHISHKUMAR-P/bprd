@@ -1,0 +1,37 @@
+IMPORTANT NOTE
+	Do not use forms
+	Import FormsModule
+	Add the created tag in app.component.html
+-------------------------------------------------------------------------------------------------------
+TERMINAL CODES
+	ng new PROJECTNAME --no-strict
+	cd PROJECTNAME
+	ng serve
+--------------------------------------------------------------------------------------------------------
+RECT.COMPONENT.HTML
+    1)  Length:<input type="text" ><br/>
+        Breadth:<input type="text" ><br/>
+        <input type="button" value="area"><br/>
+    	Area:<input type="text" >
+    2)  Add [(ngModel)] for length and breadth and [value] for area and (click) for button
+--------------------------------------------------------------------------------------------------------
+RECT.COMPONENT.TS
+    1)  export class RectComponent{
+	    length:number;
+	    breadth:number;
+	    area:number;
+
+	    constructor(){
+    		}
+	}
+    2)  import { Component } from "@angular/core";
+
+	@Component({
+    		selector:'Rect-area',
+    		templateUrl:'./rect.component.html'
+	})
+    3)  Create a function onClick() and add this.length,this.breadth,this.area inside constructor
+--------------------------------------------------------------------------------------------------------
+APP.MODULE.TS
+    1)  import FormsModule
+    2)  import RectComponent

@@ -1,0 +1,58 @@
+When we create a new folder inside the app the name should be templates with "s" if we give the template it will throw error
+
+Terminal Codes:
+    1)  django-admin startproject PROJECTNAME
+	cd ProjectName
+	sudo python3 manage.py runserver 0.0.0.0:80 ------------ THEIA IDE
+	python manage.py runserver 3000             ------------ VSC
+
+    2)  python manage.py startapp APPNAME
+-------------------------------------------------------------------------------------------------------------------------------------------
+FILES CODES:
+Settings.py:
+    1)  import os
+	STATICFILES_DIRS = [
+		os.path.join(BASE_DIR, "static")
+	]
+    2)  #add * to allowed hosts
+    3)  #add your appname in INSTALLED_APPS[
+					"mathapp" #example
+					]
+-------------------------------------------------------------------------------------------------------------------------------------------
+area.html:
+    1)  Get basic html content using "!" command in vs and ctrl+space in theia
+    2)  <form method="POST">
+		Length = <input type="text" name="length"> m
+		Breadth = <input type="text" name="breadth"> m
+		<input type="submit" vaule="Calculate">
+		Area = <input type="text" name="area"> m<sup>2</sup>
+	</form>
+    3)  Link the variables with the form
+		value = {{l}}
+		value = {{b}}
+		value = {{area}}
+    4)  Add styles
+-------------------------------------------------------------------------------------------------------------------------------------------
+views.py:
+    1)  def areacalculation(request):
+		context={}
+		return render(request,"mathapp/area.html",context)
+    2)  Link the variables to the form
+		context["l"] = "0"
+		context["b"] = "0"
+		context["area"] = "0"
+		if request.method == "POST":
+			l = request.POST.get("length","0")
+			b = request.POST.get("breadth","0")
+			area = int(l)*int(b)
+			context["l"] = l
+			context["b"] = b
+			context["area"] = area
+-------------------------------------------------------------------------------------------------------------------------------------------
+urls.py:
+    1)  from mathapp import views
+	urlpatterns = [
+		path("areaofrectangle/",views.areacalculation,name="areaofrectangle")
+		#using above line we can access our code using ../static/areaofrectangle. Fort without that use
+		path("",views.areacalculation,name="areaofrectangleroot")		
+	]

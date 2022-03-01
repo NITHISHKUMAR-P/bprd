@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanakkam</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="canvas">
+            <canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        </div>
+        <div class="shape">
+            <input type="button" id="circle" value="Circle">
+            <input type="button" id="square" value="Square"><br><br>
+        </div>
+        <div class="color">
+            <input type="button" id="red" value="Red" style="background-color: red;">
+            <input type="button" id="green" value="Green" style="background-color: green;">
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
